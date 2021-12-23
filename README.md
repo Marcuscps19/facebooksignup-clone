@@ -43,5 +43,6 @@ npm install
 ### Clique com o botão direito no arquivo index.html
 - Selecione a opção Open with Live Server
 - Espere carregar a página no navegador
+- **Diminua a tela do navegador para ver o efeito do media query**
 
 [Pull Request](https://github.com/tryber/sd-010-a-project-facebook-signup/pull/51) do desafio.
