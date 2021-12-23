@@ -1,27 +1,18 @@
 function alertLogin() {
-  const emailOuTelefone = document.getElementById('user-email-phone').value;
-  alert(emailOuTelefone);
+  alert('Dados inválidos');
 }
 
 const btnLogin = document.getElementById('button-login');
 btnLogin.addEventListener('click', alertLogin);
+
 function criaCampoGenero(e) {
-  const generoInputIdName = '#genero-input';
-  if (e.target.id === 'female' || e.target.id === 'male') {
-    if (document.querySelector(generoInputIdName)) {
-      const input = document.querySelector(generoInputIdName);
-      input.parentNode.removeChild(input);
-    }
-  } else if (!document.querySelector(generoInputIdName)) {
-    const containerGenders = document.querySelector('.genders');
-    const generoInput = document.createElement('input');
-    generoInput.type = 'text';
-    generoInput.id = 'genero-input';
-    generoInput.name = 'gender-custom';
-    generoInput.placeholder = 'Gênero(opcional)';
-    containerGenders.insertBefore(generoInput, containerGenders.lastChild);
-  }
-}
+  const input = document.querySelector('.input-gender');
+  if (e.target.id === 'personalized') {
+    input.type = 'text';
+  } else {
+    input.type = 'hidden'
+  };
+};
 
 const radios = document.querySelectorAll('.radio');
 
@@ -36,7 +27,7 @@ const buttonRegister = document.querySelector('#facebook-register');
 
 function validateForm() {
   const list = document.querySelectorAll('.right-content input');
-  for (let index = 0; index < list.length; index += 1) {
+  for (let index = 0; index < list.length-1; index += 1) {
     if (list[index].value === '') {
       return false;
     }
@@ -71,5 +62,17 @@ function changeRightContent(evt) {
   }
   evt.preventDefault();
 }
+
+function sizeOfWindow() {
+  const width = window.innerWidth;
+  if (width <= 600) {
+    const emailInput = document.getElementById('user-email-phone');
+    const passwordInput = document.getElementById('user-password');
+    emailInput.placeholder = 'Número de celular ou e-mail';
+    passwordInput.placeholder = 'Senha';
+  }
+}
+
+addEventListener('resize', sizeOfWindow);
 
 buttonRegister.addEventListener('click', changeRightContent);
