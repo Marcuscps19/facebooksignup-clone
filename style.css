@@ -3,69 +3,159 @@
   padding: 0;
 }
 
+body {
+  background-color: lightgrey;
+}
+
+input {
+  text-indent: 0.2rem;
+}
+
 .top-bar {
+  background-color: rgb(29, 27, 27);
   display: flex;
-  background-color: rgb(66, 103, 178);
+  justify-content: space-around;
   width: 100%;
-  justify-content: space-between;
+}
+
+.ctn_logo {
+  width: 50%;
 }
 
 .facebook-logo {
-  width: 18%;
+  height: auto;
+  padding: 1.5rem;
+  width: 30%;
 }
 
 .facebook-login {
+  align-content: center;
+  align-items: center;
   display: flex;
-  padding-bottom: 2%;
-  width: 35%;
+  justify-content: center;
+  width: 75%;
+}
+
+#form-group_pass {
+  margin-bottom: 3%;
+}
+
+.form-group label , span {
+  padding: 0.2rem 0.2rem 0.2rem 0;
+}
+
+.form-group input {
+  padding: 0.3rem;
+}
+
+.form-group span:hover {
+  color: lightgray;
+}
+
+.names input , .ctn_email-pass input {
+  height: 1.5rem;
+  outline: none;
+  width: 45%;
+}
+
+.ctn_email-pass input {
+  margin-bottom: 1rem;
+  width: 92%;
+}
+
+.ctn_birthdate input , .input-gender {
+  margin-bottom: 1rem;
+  outline: none;
+  width: 45%;
+}
+
+.form-group input:focus {
+  outline: none;
 }
 
 .form-group {
+  color: white;
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
   padding-left: 2%;
-  color: white;
+}
+
+#span_pass {
+  font-size: 0.8rem;
 }
 
 .form-control {
   margin-left: 2%;
-  align-self: flex-end;
+}
+
+.form-control button {
+  margin-top: 0.2rem;
+  padding: 0.2rem;
+}
+
+.form-control button:hover {
+  background-color: lightgray;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+#ctn_span_or {
+  visibility: hidden;
+}
+
+#span_or {
+  display: none;
 }
 
 .main-content {
   display: flex;
-  flex-flow: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 3%;
+  width: 100%;
 }
 
-.left-content {
-  display: flex;
-  width: 800px;
-  flex-direction: column;
+.right-content , .left-content {
+  width: 40%;
 }
 
-.right-content {
-  display: flex;
-  width: 300px;
-  flex-direction: column;
+.ctn_img {
+  width: 100%;
+}
+
+.ctn_img img {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.right-content p {
+  margin-bottom: 3rem;
 }
 
 .names {
   display: flex;
+  margin-bottom: 1rem;
 }
 
-#formMain {
+.names #lastname {
+  margin-left: 0.3rem;
+}
+
+.ctn_email-pass {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.ctn_birthdate {
   display: flex;
   flex-direction: column;
 }
 
-#label-gender {
-  display: flex;
-}
-
-.genders label {
-  padding: 0 5px;
+.ctn_birthdate label , .genders label {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .genders {
@@ -73,6 +163,159 @@
   flex-direction: column;
 }
 
-.gender-container {
-  display: flex;
+.genders div , .input-gender {
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+}
+
+#facebook-register {
+  background-color: black;
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: 600;
+  min-width: 40%;
+  padding: 0.4rem;
+  width: 25%;
+}
+
+#facebook-register:hover {
+  background-color: lightgray;
+  color: black;
+  cursor: pointer;
+}
+
+a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+.msg_create-page {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.minimalist_register {
+  visibility: hidden;
+  width: 100%;
+}
+
+@media ( max-width : 600px ) {
+
+  .top-bar {
+    flex-direction: column;
+  }
+
+  .ctn_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .facebook-login {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-group {
+    align-items: center;
+    width: 100%;
+  }
+
+  .form-group label , span {
+    display: none;
+  }
+
+  .form-group input {
+    line-height: 1.5rem;
+    width: 70%;
+  }
+
+  .form-control {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .form-control button {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+    width: 73%;
+  }
+
+  #ctn_span_or {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    visibility: visible;
+    width: 100%;
+  }
+
+  #span_or {
+    color: lightgray;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+  }
+
+  body {
+    background-color: rgb(29, 27, 27);
+  }
+
+  .left-content , .right-content {
+    display: none;
+  }
+
+  .minimalist_register {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    width: 100%;
+  }
+
+  .minimalist_register button {
+    background-color: black;
+    border: 1 px solid lightgray;
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 0.3rem;
+    width: 30%;
+  }
+
+  .minimalist_register button:hover {
+    color: lightgrey;
+    cursor: pointer;
+    outline: none;
+    transition: 1s;
+  }
+
+  .minimalist_register p {
+    color: lightgrey;
+    font-size: 0.9rem;
+  }
+
+  .minimalist_register p:hover {
+    color: grey;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  a {
+    color: grey;
+  }
+
+  a:hover {
+    color: white;
+  }
 }
