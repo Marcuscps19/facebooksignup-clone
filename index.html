@@ -11,18 +11,24 @@
 <body>
     <header>
         <div class="top-bar">
-            <img class="facebook-logo" src="imgs/facebook-logo.png" alt="Logo do Facebook">
+            <div class="ctn_logo">
+                <img class="facebook-logo" src="imgs/facebook-logo.png" alt="Logo do Facebook">
+            </div>
             <form class="facebook-login">
-                <div class="form-group">
+                <div id="form-group_email" class="form-group">
                     <label id="user-email-phone-label">Email ou telefone</label>
                     <input id="user-email-phone" type="text">
+                    <span id="span_pass"> Esqueceu sua senha?</span>
                 </div>
-                <div class="form-group">
+                <div id="form-group_pass" class="form-group">
                     <label id="user-password-label">Senha</label>
                     <input id="user-password" type="password">
                 </div>
                 <div class="form-control">
                     <button id="button-login">Entrar</button>
+                </div>
+                <div id="ctn_span_or">
+                    <span id="span_or"> ou </span>
                 </div>
             </form>
         </div>
@@ -31,8 +37,10 @@
         <div class="left-content">
             <p id="facebook-slogan">O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da
                 sua vida.</p>
-            <img id="facebook-networking" src="imgs/networking.png"
+            <div class="ctn_img">
+                <img id="facebook-networking" src="imgs/networking.png"
                 alt="imagem que demonstra através de desenho a conexão do Facebook entre várias pessoas">
+            </div>
         </div>
         <div class="right-content">
             <h1>Abra uma conta</h1>
@@ -43,28 +51,36 @@
                         <input type="text" name="firstname" id="firstname" placeholder="Nome">
                         <input type="text" name="lastname" id="lastname" placeholder="Sobrenome">
                     </div>
-                    <input type="text" name="phone_email" id="phone_email" placeholder="Celular ou email">
-                    <input type="password" name="password" placeholder="Nova senha">
-                    <label for="birthdate" id="label-birthdate">Data de nascimento</label>
-                    <input type="text" name="birthdate" id="birthdate" placeholder="dd/mm/aaaa">
+                    <div class="ctn_email-pass">
+                        <input type="text" name="phone_email" id="phone_email" placeholder="Celular ou email">
+                        <input type="password" name="password" placeholder="Nova senha">
+                    </div>
+                    <div class="ctn_birthdate">
+                        <label for="birthdate" id="label-birthdate">Data de nascimento</label>
+                        <input type="date" name="birthdate" id="birthdate" placeholder="dd/mm/aaaa">
+                    </div>
                     <div class="genders">
                         <label for="gender" id="label-gender">Gênero</label>
                             <div class="gender-container">
-                                <label for="female"> Feminino
-                                    <input class="radio" type="radio" name="gender" id="female" value="Feminino">
-                                </label>
-                                <label for="male"> Masculino
+                                <label for="female"> Feminino </label>
+                                    <input class="radio" type="radio" value="female" name="gender" id="female" value="Feminino">
+                                <label for="male"> Masculino </label>
                                     <input class="radio" type="radio" name="gender" id="male" value="Masculino">
-                                </label>
-                                <label for="personalized"> Personalizado
+                                <label for="personalized"> Personalizado </label>
                                     <input class="radio" type="radio" name="gender" id="personalized" value="Personalizado">
-                                </label>
                             </div>
+                        <input class="input-gender" placeholder="Gênero(opcional)" type="hidden" />
+                        <p class="msg_register">Ao clicar em cadastre-se você concorda com nossos<br /> <a target="_blank" href="https://github.com/Marcuscps19">Termos, Política de Dados e Política de Cookies.</a> Você pode<br />receber notificações por SMS e pode cancelar isso quando<br /> quiser. </a></p>
                     </div>
                     <button type="submit" id="facebook-register">Cadastre-se</button>
+                    <p class="msg_create-page"><a target="_blank" href="https://github.com/Marcuscps19">Criar uma página</a> para uma celebridade, banda ou empresa.</p>
                 </form>
             </div>
         </div>
+        <form class="minimalist_register"> 
+            <button><a target="_blank" href="https://github.com/Marcuscps19" >Criar nova conta</a></button>
+            <p><a target="_blank" href="https://github.com/Marcuscps19">Esqueceu sua senha?</a></p>
+        </form>
         <script src="script.js"></script>
 </body>
 
